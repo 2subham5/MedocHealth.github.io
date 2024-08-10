@@ -47,30 +47,106 @@ function MePolicy() {
                     <ListItem>
                         <ListItemText
                             primary="Sensitive Information"
-                            secondary="Medical records, financial information, health information, etc."
+                            secondary="Means and includes any information of a person as specified
+under Information Technology (Reasonable security practices and procedures and
+sensitive personal data or information) Rules, 2011, including but not limited to
+information such as medical records, medical history, password; financial information
+such as bank account or credit card or debit card or any other payment information,
+physical, physiological and mental health information; sexual orientation; biometric
+information; and any other information provided to the Company for rendering service or
+for processing, storing under a lawful contract or otherwise."
                         />
                     </ListItem>
                     <ListItem>
                         <ListItemText
                             primary="Technical Information"
-                            secondary="IP address, device type, cookies, usage data, etc."
+                            secondary={
+                                <>
+                                    a) Means and includes any information gathered through various technologies that may employ cookies, web beacons, or similar technologies to automatically record certain information from your device through which you use the Platform. This does not reveal your specific identity. This technical information may include your Internet Protocol (IP) address, device or browser type, advertising ID, Internet service provider (ISP), referring or exit pages, clickstream data, operating system. This data includes usage information and user statistics. We may request access or permission to track location-based information from your mobile device, either continuously or while you are using our mobile application(s), to provide certain location-based services. We may also request access or permission to certain features from your mobile device, including your mobile device's calendar, camera, contacts, SMS messages, storage, and other required features. If you wish to change our access or permissions, you may do so in your device's settings.
+                                    <br />
+                                    b) Access to the camera, images, and file upload is necessary for:
+                                    <br />
+                                    i. Storing medical records
+                                    <br />
+                                    ii. Updating user profile photos
+                                    <br />
+                                    iii. Capturing heart pulse rates
+                                </>
+                            }
+                        />
+                    </ListItem>
+
+                    <ListItem>
+                        <ListItemText
+                            primary="Integrated Service Information"
+                            secondary={
+                                <>
+                                    a) “Integrated Service Information” means and includes any information obtained through
+                                    access to any other social media platform (Facebook, Google, etc.) integrated with the
+                                    Company (if applicable). The Company may collect this information already provided in
+                                    your integrated service account.
+                                    <br />
+                                    By using the application and continuing to avail our services, You are providing us with your
+                                    consent to use, collect, and disclose personal information or sensitive personal data or
+                                    information (SPI). You may choose not to provide us with personal information or SPI, but if you
+                                    do so, we will be unable to provide you access to our App or services through our platform. All
+
+                                    personal information that you provide to us must be true, complete, and accurate, and you must
+                                    notify us of any changes to such personal information.
+                                </>
+                            }
                         />
                     </ListItem>
                     <ListItem>
                         <ListItemText
-                            primary="Integrated Service Information"
-                            secondary="Information from integrated social media platforms"
+                            primary="Collection of Your Information"
+                            secondary={
+                                <>
+                                    a) To enhance user experience, we kindly request permission to read and write files on
+external storage. This access is crucial for users to securely upload and store their
+medical records on the ME app, granting them full control over sharing these records
+with healthcare providers. Please note that only files explicitly uploaded by the user will
+be accessed; rest assured, no other files from the storage system will be scanned or
+utilised in any way.
+                                    <br />
+                                    b) We might receive information about You, such as order details, Your details shared with
+Our partners, etc., from other sources, including Our partners, advertisers, or third
+parties registered on the Platform, and add it to Our account information. The Entity, to
+monitor the quality of the consultation, may access the exchanges between the
+Registered Medical Practitioner and the Customers.
+<br/>
+c) Payment Data. We may collect data necessary to process your payment if you make
+purchases, such as your payment instrument number and the security code associated
+with your payment instrument.
+<br/>
+d) Social Media Login Data. We may provide you with the option to register with us using
+your existing social media account details, like your Google account (Gmail) or other
+social media account.
+<br/>
+e) Application Data. If you use our application(s), we also may collect the following
+information if you choose to provide us with access or permission:
+<br/>
+i. Geolocation Information. We may request access or permission to track
+location-based information from your mobile device, either continuously or while
+you are using our mobile application(s), to provide certain location-based
+services. If you wish to change our access or permissions, you may do so in your
+device's settings.
+<br/>
+ii. Mobile Device Access. We may request access or permission to certain features
+from your mobile device, including your mobile device's calendar, camera,
+contacts, SMS messages, storage, and other required features. If you wish to
+change our access or permissions, you may do so in your device's settings.
+<br/>
+iii. Push Notifications. We may request to send you push notifications regarding your
+account or certain features of the application(s). If you wish to opt out of receiving
+these types of communications, you may turn them off in your device's settings.
+                                </>
+                            }
                         />
                     </ListItem>
                 </List>
 
-                <Typography variant="h5" component="h2" className="section-title">
-                    Access Permission for File Management
-                </Typography>
-
-                <Typography variant="body1" className="policy-text">
-                    To enhance user experience, we kindly request permission to read and write files on external storage. This access is crucial for users to securely upload and store their medical records on the ME app, granting them full control over sharing these records with healthcare providers. Please note that only files explicitly uploaded by the user will be accessed; rest assured, no other files from the storage system will be scanned or utilised in any way.
-                </Typography>
+            
                 <br></br>
                 <Typography variant="h5" component="h2" className="section-title">
                     Use of Your Information
@@ -168,12 +244,19 @@ function MePolicy() {
                 <Typography variant="body1" className="policy-text">
                     A cookie is a small file placed on the hard drive of your device. You may refuse to accept  cookies by activating the appropriate setting on your browser. However, if you select this setting, you may be unable to access certain parts of our application. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our application.
                 </Typography>
-                <Typography variant="body1" className="policy-text">
-                    Medoc and other third party service providers collect information about You using these cookies. Please note, a cookie in no way gives Us access to Your device. Our application uses these "cookies" to collect information and to improve Our service. Some cookies and other technologies may serve to recall Personal Information previously indicated by You.
-                </Typography>
+    
+                <br/>
                 <Typography variant="body1" className="policy-text">
                     <Typography variant="body1" className="policy-text">
                         Medoc and other third party service providers collect information about You using these cookies. Please note, a cookie in no way gives Us access to Your device. Our application uses these "cookies" to collect information and to improve Our service. Some cookies and other technologies may serve to recall Personal Information previously indicated by You.
+                    </Typography>
+                </Typography>
+                <br></br>
+                <Typography variant="body1" className="policy-text">
+                    <Typography variant="body1" className="policy-text">
+                    Other websites may place their own cookies or other files on Your device, collect data or
+solicit personal information from You, for which We shall not be held responsible or
+liable. We encourage You to read the privacy policies of all external sites.
                     </Typography>
                 </Typography>
                 <br></br>
