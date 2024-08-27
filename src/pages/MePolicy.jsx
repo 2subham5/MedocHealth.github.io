@@ -185,55 +185,55 @@ these types of communications, you may turn them off in your device's settings.
                 </Typography>
                 <List>
                     <ListItem>
-                        <ListItemText primary="to comply with central, state or local laws that require disclosure" />
+                        <ListItemText secondary="to comply with central, state or local laws that require disclosure" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to respond to law enforcement officials or to judicial orders, subpoenas or other process" />
+                        <ListItemText secondary="to respond to law enforcement officials or to judicial orders, subpoenas or other process" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to avert a serious threat to health or safety" />
+                        <ListItemText secondary="to avert a serious threat to health or safety" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to enable the provision of Services opted by You including collating all User medical records, reports and other data" />
+                        <ListItemText secondary="to enable the provision of Services opted by You including collating all User medical records, reports and other data" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to enable the viewing of content in Your interest" />
+                        <ListItemText secondary="to enable the viewing of content in Your interest" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to copy, reproduce, store, distribute, publish, export, adapt, edit and translate Personal Information to the extent reasonably required for the provision of Services by Medoc" />
+                        <ListItemText secondary="to copy, reproduce, store, distribute, publish, export, adapt, edit and translate Personal Information to the extent reasonably required for the provision of Services by Medoc" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to provide better products and Services and to programmatically use Your data to give You contextual Services." />
+                        <ListItemText secondary="to provide better products and Services and to programmatically use Your data to give You contextual Services." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to fulfil Your requests for certain Services." />
+                        <ListItemText secondary="to fulfil Your requests for certain Services." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="to contact You about Our Services." />
+                        <ListItemText secondary="to contact You about Our Services." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To respond to Your comments, reviews, and questions and provide better customer service." />
+                        <ListItemText secondary="To respond to Your comments, reviews, and questions and provide better customer service." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To track Your activity on Our digital platforms and personalise and improve Your experience." />
+                        <ListItemText secondary="To track Your activity on Our digital platforms and personalise and improve Your experience." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To understand Your preferences and to enhance, personalise, and customise Your experience using the application." />
+                        <ListItemText secondary="To understand Your preferences and to enhance, personalise, and customise Your experience using the application." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To use Your information to operate, improve, and maintain our site, and to prevent fraud and abuse." />
+                        <ListItemText secondary="To use Your information to operate, improve, and maintain our site, and to prevent fraud and abuse." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To provide You with notices about Your account, including termination and renewal." />
+                        <ListItemText secondary="To provide You with notices about Your account, including termination and renewal." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To carry out our obligations and enforce our rights arising from any contracts entered into between You and us." />
+                        <ListItemText secondary="To carry out our obligations and enforce our rights arising from any contracts entered into between You and us." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To fulfil any other purpose for which You provide Us Personal Information." />
+                        <ListItemText secondary="To fulfil any other purpose for which You provide Us Personal Information." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="For any other purpose for which You give Us authorisation." />
+                        <ListItemText secondary="For any other purpose for which You give Us authorisation." />
                     </ListItem>
                 </List>
 
@@ -267,97 +267,212 @@ liable. We encourage You to read the privacy policies of all external sites.
                 {/* <Typography variant="body1" className="policy-text">
                     We may disclose your information to third parties for various purposes, including:
                 </Typography> */}
+                <Typography variant="body1" className="policy-text">
+                We may disclose aggregated information about our users, and information that does not identify any individual without restriction.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may share information in specific situations described in this section and/or with the following categories of third parties.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We might share your data with third-party vendors, service providers, contractors, or agents ('third parties') who help us with our services and need access to that information to do their job. We have contracts with these third parties to protect your personal information. They can only use your personal information as instructed by us and cannot share it with any other organisation. They are committed to safeguarding the data they have on our behalf and keeping it for the time we specify. The types of third parties we may share personal information with include Government Entities, Research and Development entities, Hospitals, and Doctors.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may also share or transfer Your information to Any third party to which We transfer or sell Our assets, merge, or consolidate. Such parties shall have the right to continue to use the information (including SPI) provided to Us by You in accordance with the Terms and this Privacy Policy.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may disclose information to Our partners, affiliates, subsidiaries, group entities, investors, stakeholders, or potential associates in an anonymized and aggregated manner so that they, too, may understand how Users use Our Site and enable Us to create a better overall experience for You.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may disclose your information to specific Google Maps Platform APIs, including Google Maps API and Places API, to facilitate location-based services. Your location data is collected and stored on your device's cache for an enhanced user experience. Be assured that we prioritise the security and confidentiality of your data. If you wish to revoke your consent, please contact us using the provided contact details in this Privacy Policy.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may also share your personal information to enforce our terms and agreements or safeguard the rights, property, and safety of our users and others. This may involve sharing information with other companies, organisations, governments, or regulatory authorities for fraud prevention and reducing credit risks.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                When you share personal information or engage in public areas within the Services, this information may be visible to all users and could be publicly accessible beyond the Services indefinitely. If you connect with other users on our platform or sign up via a social network like Google, your contacts on that social network will have access to your name, profile picture, and activity descriptions. Similarly, other users can see your activity descriptions, interact with you on the platform, and view your profile.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may disclose your information to deal with requests, enquiries, complaints or disputes and other customer care related activities including those arising out of the Users’ request of the Services and all other general administrative and business purposes.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may also disclose your personal information to comply with any court order, law, or legal process, including to respond to any government or regulatory request.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may disclose your personal information to enforce or apply our Terms of use.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may disclose your information, when Medoc, in its sole discretion, deems it necessary in order to protect its rights or the rights of others; or for any other purpose disclosed by Us when You provide the Personal Information.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                We may also use Your personal data or contact information such as, Your name, address, postcode, gender, occupation, age, date of birth, email address, telephone number, company name, job title, and department only when Company requires it for the purposes of:
+                </Typography>
                 <List>
-                    <ListItem>
-                        <ListItemText primary="We may disclose aggregated information about our users, and information that does not identify any individual without restriction." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may share information in specific situations described in this section and/or with the following categories of third parties." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We might share your data with third-party vendors, service providers, contractors, or agents ('third parties') who help us with our services and need access to that information to do their job. We have contracts with these third parties to protect your personal information. They can only use your personal information as instructed by us and cannot share it with any other organisation. They are committed to safeguarding the data they have on our behalf and keeping it for the time we specify. The types of third parties we may share personal information with include Government Entities, Research and Development entities, Hospitals, and Doctors." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may also share or transfer Your information to Any third party to which We transfer or sell Our assets, merge, or consolidate. Such parties shall have the right to continue to use the information (including SPI) provided to Us by You in accordance with the Terms and this Privacy Policy." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may disclose information to Our partners, affiliates, subsidiaries, group entities, investors, stakeholders, or potential associates in an anonymized and aggregated manner so that they, too, may understand how Users use Our Site and enable Us to create a better overall experience for You." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may disclose your information to specific Google Maps Platform APIs, including Google Maps API and Places API, to facilitate location-based services. Your location data is collected and stored on your device's cache for an enhanced user experience. Be assured that we prioritise the security and confidentiality of your data. If you wish to revoke your consent, please contact us using the provided contact details in this Privacy Policy." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may also share your personal information to enforce our terms and agreements or safeguard the rights, property, and safety of our users and others. This may involve sharing information with other companies, organisations, governments, or regulatory authorities for fraud prevention and reducing credit risks." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="When you share personal information or engage in public areas within the Services, this information may be visible to all users and could be publicly accessible beyond the Services indefinitely. If you connect with other users on our platform or sign up via a social network like Google, your contacts on that social network will have access to your name, profile picture, and activity descriptions. Similarly, other users can see your activity descriptions, interact with you on the platform, and view your profile." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may disclose your information to deal with requests, enquiries, complaints or disputes and other customer care related activities including those arising out of the Users’ request of the Services and all other general administrative and business purposes." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may also disclose your personal information to comply with any court order, law, or legal process, including to respond to any government or regulatory request." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may disclose your personal information to enforce or apply our Terms of use." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may disclose your information, when Medoc, in its sole discretion, deems it necessary in order to protect its rights or the rights of others; or for any other purpose disclosed by Us when You provide the Personal Information." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="We may also use Your personal data or contact information such as, Your name, address, postcode, gender, occupation, age, date of birth, email address, telephone number, company name, job title, and department only when Company requires it for the purposes of:" />
-                    </ListItem>
+
                     <List>
                         <ListItem>
-                            <ListItemText primary="i. processing Your application to use our Services and to provide You with the requested Services through mobile app;" />
+                            <ListItemText secondary="i. processing Your application to use our Services and to provide You with the requested Services through mobile app;" />
                         </ListItem>
                         <ListItem>
-                            <ListItemText primary="ii. dealing with any complaint, queries or problems reported by You regarding the Services offered by the Company;" />
+                            <ListItemText secondary="ii. dealing with any complaint, queries or problems reported by You regarding the Services offered by the Company;" />
                         </ListItem>
                         <ListItem>
-                            <ListItemText primary="iii. notifying You of changes in its Services and help improve the Services Company provide to you." />
+                            <ListItemText secondary="iii. notifying You of changes in its Services and help improve the Services Company provide to you." />
                         </ListItem>
                     </List>
                 </List>
+                <Typography variant="h5" component="h2" className="section-title">
+                Choices about how we use and disclose your
+                information
+                </Typography>
+<List>
+    <ListItem>
+        <ListItemText primary="We strive to provide you with choices regarding the personal information you provide to us. We
+have created mechanisms to provide you with the following control over your information:"
 
-
+    secondary={
+        <>
+        <br/>
+a) You can set your browser to refuse all or some browser cookies, or to alert you when
+cookies are being sent. If you disable or refuse cookies, please note that some parts of
+this site may then be inaccessible or not function properly.
+<br/>
+b) If you do not wish to have your email address/contact information used by us to promote
+our own or third parties' products or services, you can opt-out by checking the relevant
+box located on the form on which we collect your data or at any other time by logging
+into the application and adjusting your user preferences in your account profile by
+checking or unchecking the relevant boxes or by sending us an email stating your
+request. If we have sent you a promotional email, you may send us a return email asking
+to be omitted from future email distributions.
+        </>
+    }
+/>
+    </ListItem>
+</List>
 
                 <Typography variant="h5" component="h2" className="section-title">
                     Social Media Integration and Data Handling
                 </Typography>
-
                 <Typography variant="body1" className="policy-text">
-                    Our Services allow you to register and sign in using third-party social media accounts. We receive certain profile information from your social media provider when you use this option.
+               a) Our Services provide you with the option to register and sign in using your third-party
+social media account credentials (such as your Google logins). Should you opt for this
+method, we will receive specific profile details about you from your social media provider.
+The profile data we obtain may vary based on the social media provider involved but
+typically includes your name, email address, friends list, profile picture, and other
+information you have chosen to share publicly on the social media platform.
                 </Typography>
+                <Typography variant="body1" className="policy-text">
+               b) The information received will be utilised solely for account authentication or as explicitly
+communicated to you concerning the relevant Services. It is important to understand that
+we do not oversee or bear responsibility for how your third-party social media provider
+utilises your personal information. We suggest reviewing their privacy notice to
+comprehend how they gather, utilise, and disclose your personal data, as well as how
+you can manage your privacy settings on their websites and applications. We shall not
+use or transfer any data or information received from the integration of the email
+addresses with the account on the Platform to third parties for any purpose other than as
+explicitly authorised by the User.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+               c) You can choose to de-link your Gmail account with the application at any time and/ or
+you can delete your information by writing an email at the address provided in this
+Privacy Policy.
+                </Typography>
+
 
                 <Typography variant="h5" component="h2" className="section-title">
                     Third-Party Data Sharing and Collaboration
                 </Typography>
-
                 <Typography variant="body1" className="policy-text">
-                    We use OTPLess for authentication and share data with the Government of India's Ayushman Bharat Digital Mission. OTPLess has limited access to sensitive information, only for user authentication purposes.
+               a) We utilise OTPLess for authentication and share data with the Government of India's
+Ayushman Bharat Digital Mission, such as demographic details, health records and
+relevant medical data for seamless service delivery. By using this platform, you consent
+to the sharing of necessary data with Ayushman Bharat Digital Mission for the purpose
+of healthcare facilitation and improvement.
                 </Typography>
+                <Typography variant="body1" className="policy-text">
+               b) We inform you that OTPLess doesn't have access to all sensitive information but only
+the minimum scope needed for authentication of users. We share non-personal
+information that cannot be used to identify an individual, with Government Entities,
+Research and Development entities, Hospitals, and Doctors. Your privacy and data
+security are of utmost importance to us, and we adhere to all applicable data protection
+laws to safeguard your information.
+                </Typography>
+             
 
                 <Typography variant="h5" component="h2" className="section-title">
                     User Privacy Rights
                 </Typography>
-
+<List>
+    <ListItem>
+        <ListItemText primary="Withdrawing your consent"/>
+    </ListItem>
+</List>
                 <Typography variant="body1" className="policy-text">
-                    You have the right to:
+                    a) If we are relying on your consent to process your personal information, whether express
+or implied, you have the right to withdraw your consent at any time. To do so, simply
+contact us using the details provided in this policy under the Contact Us section. Please
+be aware that withdrawing your consent will not affect the legality of processing done
+before the withdrawal. Additionally, where permitted by law, it will not impact the
+processing of your personal information carried out based on lawful grounds other than
+consent.
                 </Typography>
 
                 <List>
                     <ListItem>
-                        <ListItemText primary="Withdraw your consent" />
+                        <ListItemText primary="Opting out of marketing and promotional communication" />
                     </ListItem>
+                    </List>
+                    <Typography variant="body1" className="policy-text">
+                    a) You have the option to unsubscribe from our marketing and promotional communications
+sent via email at any time by clicking on the unsubscribe link in the emails you receive.
+This action will remove you from the marketing lists. However, we may still contact you
+for essential service-related messages, such as account administration, service
+requests, or other non-marketing purposes.
+                </Typography>
+                <List>
+    
                     <ListItem>
-                        <ListItemText primary="Opt out of marketing communications" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Access and correct your information" />
+                        <ListItemText primary="Accessing and correcting your information" />
                     </ListItem>
                 </List>
+                <Typography variant="body1" className="policy-text">
+                    a) If you would at any time like to review or change the information in your account or
+                    terminate your account, you can:
+                    
+    <List>
+    <ListItem>
+        <ListItemText secondary={
+            <>
+            i) Log in to your account settings and update your user account. 
+            <br></br>
+            ii) Contact us using the contact information provided.
+       </>
+        }
+        />
+    </ListItem>
+</List>
 
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                    b) You may also send us an email at the address provided under the Contact Us section to
+request access to, correct or delete any personal information that you have provided to
+us. We cannot delete your personal information except by also deleting your user
+account. We may not accommodate a request to change information if we believe the
+change would violate any law or legal requirement or cause the information to be
+incorrect.
+                </Typography>
+                <Typography variant="body1" className="policy-text">
+                    c) Upon your request to terminate your account, we will deactivate or delete your account
+and information from our active databases. However, we may retain some information in
+our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce
+our legal terms, and/or comply with applicable legal requirements.
+                </Typography>
+                
+<Typography variant="body1" className="policy-text">
+                    d) If a User has inadvertently submitted any Personal Information prior to reading the
+Privacy Policy and Terms of Use, and such User does not agree with the manner in
+which such information is collected, stored or used, then such User can ask Medoc, by
+sending an email at the address provided under the Contact Us section, containing the rectification required, whether Medoc is keeping Personal Information about such User.
+                </Typography>
                 <Typography variant="h5" component="h2" className="section-title">
                     Data Security
                 </Typography>
