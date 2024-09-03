@@ -4,6 +4,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import MenuIcon from "@mui/icons-material/Menu";
 import Blog from "./BBlog";
 import img1 from "../resources//phone medoc.png";
+// import medocBackground from '../resources/medoc-black.png';
 
 import ua1 from "../resources/userapp1.png";
 import ua2 from "../resources/docassist.png";
@@ -154,32 +155,54 @@ function HomePage() {
           <img src={img1} className={styles.img1} alt="#"></img>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ ...alignCenter, backgroundColor: "#286d8d" }}>
-          <div className={`${styles.card}`}>
-            <h1>#betterthanpaper</h1>
-            <p>
-              Simplifying medical finances and bringing family medicine together
-              by making the healthcare industry more accessible to people from
-              all walks of the country. Medoc aims to be the single destination
-              for all your healthcare needs.
-            </p>
-          </div>
-        </ParallaxLayer>
 
-        <ParallaxLayer
-          sticky={{ start: 1, end: 1 }}
-          style={{ ...alignCenter, backgroundColor: "#286d8d" }}
-        >
-          <div className={`${styles.card}`}>
-            <h1>#cheaperthanpaper</h1>
-            <p>
-              Simplifying medical finances and bringing family medicine together
-              by making the healthcare industry more accessible to people from
-              all walks of the country. Medoc aims to be the single destination
-              for all your healthcare needs.
-            </p>
-          </div>
-        </ParallaxLayer>
+
+<ParallaxLayer
+  style={{
+    ...alignCenter,
+    backgroundImage: `url(${logo})`,
+    backgroundSize: 'contain',  // Fit the image to the width of the container
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',  // Center the image horizontally and vertically
+    width: '100%',  // Ensure the ParallaxLayer takes the full width
+  }}
+>
+  <div className={`${styles.card}`}>
+    <h1>#betterthanpaper</h1>
+    <p>
+      Simplifying medical finances and bringing family medicine together
+      by making the healthcare industry more accessible to people from
+      all walks of the country. Medoc aims to be the single destination
+      for all your healthcare needs.
+    </p>
+  </div>
+</ParallaxLayer>
+
+<ParallaxLayer
+  sticky={{ start: 1, end: 1 }}
+  style={{
+    ...alignCenter,
+    backgroundImage: `url(${logo})`,
+    backgroundSize: 'contain',  // Fit the image to the width of the container
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',  // Center the image horizontally and vertically
+    width: '100%',  // Ensure the ParallaxLayer takes the full width
+  }}
+>
+  <div className={`${styles.card}`}>
+    <h1>#cheaperthanpaper</h1>
+    <p>
+      Simplifying medical finances and bringing family medicine together
+      by making the healthcare industry more accessible to people from
+      all walks of the country. Medoc aims to be the single destination
+      for all your healthcare needs.
+    </p>
+  </div>
+</ParallaxLayer>
+
+
+
+
         <ParallaxLayer offset={2} sticky={{ start: 2, end: 9 }}>
           <div className={styles.featureimage}>
             {caroData.map((item, idx) => (
