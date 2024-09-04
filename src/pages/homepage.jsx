@@ -23,6 +23,7 @@ import hi1 from "../resources/Available on all devices.png";
 import hi2 from "../resources/A Complete Solution.png";
 // logo
 import logo from "../resources/medoc-black.png";
+import logo1 from "../resources/Group-69.png";
 import bt from "../resources/image-05-removebg-preview.png";
 import playbutton from "../resources/googleplay-grey.png";
 import fPlayButton from "../resources/googleplay-black.png";
@@ -32,7 +33,7 @@ import medoclogoblack from "../resources/medoc-black.png";
 import { Link } from "react-router-dom";
 
 function HomePage() {
-  
+
   const caroData = [f1, f2, f3, f4, f5, f6, f7, f8];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const alignCenter = {
@@ -156,18 +157,31 @@ function HomePage() {
         </ParallaxLayer>
 
 
-
-<ParallaxLayer
+                                                      
+        <ParallaxLayer
   style={{
     ...alignCenter,
-    backgroundImage: `url(${logo})`,
-    backgroundSize: 'contain',  // Fit the image to the width of the container
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',  // Center the image horizontally and vertically
-    width: '100%',  // Ensure the ParallaxLayer takes the full width
+    width: '100%',
+    position: 'relative', // Needed for the pseudo-element to work
+    zIndex: 1, // Ensure this element is above the background
   }}
 >
-  <div className={`${styles.card}`}>
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${logo1})`,
+      backgroundSize: '100px 100px',  // Adjust size for watermark effect
+      backgroundRepeat: 'repeat',  // Repeat the image to create a watermark
+      backgroundPosition: 'center',
+      opacity: 0.3, // Control the opacity of the background
+      zIndex: -1, // Ensure this background is behind the content
+    }}
+  />
+  <div className={`${styles.card}`} style={{ position: 'relative', zIndex: 2 }}>
     <h1>#betterthanpaper</h1>
     <p>
       Simplifying medical finances and bringing family medicine together
@@ -179,17 +193,30 @@ function HomePage() {
 </ParallaxLayer>
 
 <ParallaxLayer
-  sticky={{ start: 1, end: 1 }}
   style={{
     ...alignCenter,
-    backgroundImage: `url(${logo})`,
-    backgroundSize: 'contain',  // Fit the image to the width of the container
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',  // Center the image horizontally and vertically
-    width: '100%',  // Ensure the ParallaxLayer takes the full width
+    width: '100%',
+    position: 'relative', // Needed for the overlay to work correctly
+    zIndex: 1, // Ensure this element is above the background
   }}
 >
-  <div className={`${styles.card}`}>
+  {/* Background overlay */}
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${logo1})`,
+      backgroundSize: '100px 100px', // Adjust size for watermark effect
+      backgroundRepeat: 'repeat', // Repeat the image to create a watermark
+      backgroundPosition: 'center',
+      opacity: 0.3, // Control the opacity of the background image
+      zIndex: -1, // Ensure the background is behind the content
+    }}
+  />
+  <div className={`${styles.card}`} style={{ position: 'relative', zIndex: 2 }}>
     <h1>#cheaperthanpaper</h1>
     <p>
       Simplifying medical finances and bringing family medicine together
@@ -199,6 +226,8 @@ function HomePage() {
     </p>
   </div>
 </ParallaxLayer>
+
+
 
 
 
