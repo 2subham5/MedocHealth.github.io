@@ -2,7 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "../css/homepage.module.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import MenuIcon from "@mui/icons-material/Menu";
+import Blog from "./BBlog";
 import img1 from "../resources//phone medoc.png";
+// import medocBackground from '../resources/medoc-black.png';
 
 import ua1 from "../resources/userapp1.png";
 import ua2 from "../resources/docassist.png";
@@ -19,17 +21,19 @@ import f7 from "../resources/feature7.png";
 import f8 from "../resources/feature8.png";
 import hi1 from "../resources/Available on all devices.png";
 import hi2 from "../resources/A Complete Solution.png";
-
+// logo
+import logo from "../resources/medoc-black.png";
+import logo1 from "../resources/Group-69.png";
 import bt from "../resources/image-05-removebg-preview.png";
 import playbutton from "../resources/googleplay-grey.png";
 import fPlayButton from "../resources/googleplay-black.png";
-import { Drawer } from "@mui/material";
+import { Drawer, Hidden } from "@mui/material";
 import { drawerList } from "./drawerlist";
 import medoclogoblack from "../resources/medoc-black.png";
 import { Link } from "react-router-dom";
-import { BorderAll } from "@mui/icons-material";
 
 function HomePage() {
+
   const caroData = [f1, f2, f3, f4, f5, f6, f7, f8];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const alignCenter = {
@@ -84,7 +88,7 @@ function HomePage() {
 
   return (
     <div className={styles.herobackground}>
-      <Parallax ref={parallaxRef} pages={19.6}>
+      <Parallax ref={parallaxRef} pages={20}>
         <ParallaxLayer
           offset={0}
           sticky={{ start: 0, end: 18 }}
@@ -92,6 +96,9 @@ function HomePage() {
         >
           {scrolled === false ? (
             <nav className={styles.navbarWhite} onMouseLeave={handleSidebar}>
+              <div className={styles.navleft}>
+                <img src={logo} alt="logo" className={styles.logo} />
+              </div>
               <div className={styles.navright}>
                 <Link
                   className={styles.navbuttonWhite}
@@ -119,10 +126,17 @@ function HomePage() {
                   FAQs
                 </Link>
 
-                <Link className={styles.navbuttonWhite}>Blog</Link>
                 <Link
                   className={styles.navbuttonWhite}
-                  onClick={() => parallaxRef.current.scrollTo(18)}
+                  // onClick={() => parallaxRef.current.scrollTo(18)}
+                  to="https://blog.medochealth.in/"
+                >
+                  Blog
+                </Link>
+
+                <Link
+                  className={styles.navbuttonWhite}
+                  onClick={() => parallaxRef.current.scrollTo(19)}
                 >
                   Contact Us
                 </Link>
@@ -142,32 +156,82 @@ function HomePage() {
           <img src={img1} className={styles.img1} alt="#"></img>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ ...alignCenter, backgroundColor: "#286d8d" }}>
-          <div className={`${styles.card}`}>
-            <h1>#betterthanpaper</h1>
-            <p>
-              Simplifying medical finances and bringing family medicine together
-              by making the healthcare industry more accessible to people from
-              all walks of the country. Medoc aims to be the single destination
-              for all your healthcare needs.
-            </p>
-          </div>
-        </ParallaxLayer>
 
+                                                      
         <ParallaxLayer
-          sticky={{ start: 1, end: 1 }}
-          style={{ ...alignCenter, backgroundColor: "#286d8d" }}
-        >
-          <div className={`${styles.card}`}>
-            <h1>#cheaperthanpaper</h1>
-            <p>
-              Simplifying medical finances and bringing family medicine together
-              by making the healthcare industry more accessible to people from
-              all walks of the country. Medoc aims to be the single destination
-              for all your healthcare needs.
-            </p>
-          </div>
-        </ParallaxLayer>
+  style={{
+    ...alignCenter,
+    width: '100%',
+    position: 'relative', // Needed for the pseudo-element to work
+    zIndex: 1, // Ensure this element is above the background
+  }}
+>
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${logo1})`,
+      backgroundSize: '100px 100px',  // Adjust size for watermark effect
+      backgroundRepeat: 'repeat',  // Repeat the image to create a watermark
+      backgroundPosition: 'center',
+      opacity: 0.3, // Control the opacity of the background
+      zIndex: -1, // Ensure this background is behind the content
+    }}
+  />
+  <div className={`${styles.card}`} style={{ position: 'relative', zIndex: 2 }}>
+    <h1>#betterthanpaper</h1>
+    <p>
+      Simplifying medical finances and bringing family medicine together
+      by making the healthcare industry more accessible to people from
+      all walks of the country. Medoc aims to be the single destination
+      for all your healthcare needs.
+    </p>
+  </div>
+</ParallaxLayer>
+
+<ParallaxLayer
+  style={{
+    ...alignCenter,
+    width: '100%',
+    position: 'relative', // Needed for the overlay to work correctly
+    zIndex: 1, // Ensure this element is above the background
+  }}
+>
+  {/* Background overlay */}
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${logo1})`,
+      backgroundSize: '100px 100px', // Adjust size for watermark effect
+      backgroundRepeat: 'repeat', // Repeat the image to create a watermark
+      backgroundPosition: 'center',
+      opacity: 0.3, // Control the opacity of the background image
+      zIndex: -1, // Ensure the background is behind the content
+    }}
+  />
+  <div className={`${styles.card}`} style={{ position: 'relative', zIndex: 2 }}>
+    <h1>#cheaperthanpaper</h1>
+    <p>
+      Simplifying medical finances and bringing family medicine together
+      by making the healthcare industry more accessible to people from
+      all walks of the country. Medoc aims to be the single destination
+      for all your healthcare needs.
+    </p>
+  </div>
+</ParallaxLayer>
+
+
+
+
+
+
         <ParallaxLayer offset={2} sticky={{ start: 2, end: 9 }}>
           <div className={styles.featureimage}>
             {caroData.map((item, idx) => (
@@ -316,25 +380,23 @@ function HomePage() {
         >
           <div className={styles.userappdescription}>
             <div className={styles.userdes}>
-              <h1>Medoc +</h1>
+              <h1>ME End User Application</h1>
 
-              <h3> Nursing Module</h3>
+              <h3>Complete Medical Companion</h3>
               <p>
-                Efficiently manage tasks and patient data with customizable
-                settings for a smooth workflow.
+                Safely store and access your entire family's medical records in
+                one secure app.
               </p>
 
-              <h3> Pharma Module</h3>
+              <h3>Presciptions Availability & Financial Organizer"</h3>
               <p>
-                Manage medication orders, track inventory, and process payments
-                seamlessly.
+                {" "}
+                Securely store medical histories, track spending, get reminders
+                for medications, and effortlessly manage appointments.
               </p>
 
-              <h3> Paramedics Module</h3>
-              <p>
-                Locate nearby medical facilities, connect with paramedics for
-                swift crisis response.
-              </p>
+              <h3>Women's Health</h3>
+              <p>Track your entire health progress and dates.</p>
             </div>
 
             <div>
@@ -495,7 +557,10 @@ function HomePage() {
         </ParallaxLayer>
         <ParallaxLayer
           offset={17}
-          style={{ backgroundColor: "white", zIndex: "1" }}
+          style={{
+            backgroundColor: "white",
+            zIndex: "0",
+          }}
         >
           <div className={styles.faq}>
             <h1>Doubts?</h1>
@@ -570,81 +635,86 @@ function HomePage() {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={18} style={{ backgroundColor: "#EEEEEE" }}>
-          <div className={styles.contactus}>
-            <h1>Medoc free demo Registration</h1>
-            <p>
-              Welcome to Medoc! Simplify your healthcare journey with us—your
-              destination for affordable medical finances and trusted family
-              medicine. Join now to make healthcare accessible and stress-free
-              for everyone.
-            </p>
-            <div className={styles.contactform}>
-              <div className={styles.formrow1}>
-                <input type="text" placeholder="Doctor/Hospital Name"></input>
-                <div>
-                  <select name="Specialities" id="pet-select">
-                    <option value="Speciality">Speciality</option>
-                    <option value="general">General Medicine</option>
-                    <option value="pediatrics">Pediatrics</option>
-                    <option value="cardiology">Cardiology</option>
-                    <option value="neurology">Neurology</option>
-                    <option value="orthopedics">Orthopedics</option>
-                  </select>
-                </div>
-              </div>
-              <div className={styles.formrow2}>
-                <div>
-                  <select name="Country-Code" id="country-code-select">
-                    <option value="+91">+91 India</option>
-                    <option value="+1">+1 USA/Canada</option>
-                    <option value="+44">+44 United Kingdom</option>
-                    <option value="+49">+49 Germany</option>
-                    <option value="+33">+33 France</option>
-                    <option value="+81">+81 Japan</option>
-                    <option value="+61">+61 Australia</option>
-                    <option value="+86">+86 China</option>
-                    <option value="+55">+55 Brazil</option>
-                    <option value="+27">+27 South Africa</option>
-                    <option value="+82">+82 South Korea</option>
-                    <option value="+91">+91 India</option>
-                  </select>
 
-                  <input type="text" placeholder="" />
-                </div>
-                <div>
-                  <select name="Country" id="country-select">
-                    <option value="">Select Country</option>
-                    <option value="United States">United States</option>
-                    <option value="Canada">Canada</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Germany">Germany</option>
-                    <option value="France">France</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Australia">Australia</option>
-                    <option value="China">China</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="South Korea">South Korea</option>
-                    <option value="India">India</option>
-                  </select>
-                </div>
-              </div>
+        {/* BLOG SECTION NEEDS TO BE INTEGRATED */}
+        {/* <ParallaxLayer offset={18} style={{ backgroundColor: "#EEEEEE" }}>
 
-              <div className={styles.formrow1}>
-                <input type="text" placeholder="Your Name*"></input>
-                <input type="text" placeholder="Your Email*"></input>
-              </div>
-              <div className={styles.formrow2}>
-                <input placeholder="This question is about"></input>
-              </div>
-              <div className={styles.formrow3}>
-                <input placeholder="Your message..." type="text"></input>
-              </div>
-              <div className={styles.formbutton}>Start Free Demo</div>
-            </div>
-          </div>
-        </ParallaxLayer>
+          <Blog />
+        </ParallaxLayer> */}
+
+<ParallaxLayer offset={18} style={{ backgroundColor: "#EEEEEE" }}>
+  <div className={styles.contactus}>
+    <h1>Medoc Free Demo Registration</h1>
+    <p>
+      Welcome to Medoc! Simplify your healthcare journey with us—your
+      destination for affordable medical finances and trusted family
+      medicine. Join now to make healthcare accessible and stress-free
+      for everyone.
+    </p>
+    <div className={styles.contactform}>
+      <div className={styles.formrow1}>
+        <input type="text" placeholder="Doctor/Hospital Name"></input>
+        <div>
+          <select name="Specialities" id="pet-select">
+            <option value="Speciality">Speciality</option>
+            <option value="general">General Medicine</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedics">Orthopedics</option>
+          </select>
+        </div>
+      </div>
+      <div className={styles.formrow2}>
+        <div>
+          <select name="Country-Code" id="country-code-select">
+            <option value="+91">+91 India</option>
+            <option value="+1">+1 USA/Canada</option>
+            <option value="+44">+44 United Kingdom</option>
+            <option value="+49">+49 Germany</option>
+            <option value="+33">+33 France</option>
+            <option value="+81">+81 Japan</option>
+            <option value="+61">+61 Australia</option>
+            <option value="+86">+86 China</option>
+            <option value="+55">+55 Brazil</option>
+            <option value="+27">+27 South Africa</option>
+            <option value="+82">+82 South Korea</option>
+          </select>
+          <input type="text" placeholder="Phone Number"></input>
+        </div>
+        <div>
+          <select name="Country" id="country-select">
+            <option value="">Select Country</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Japan">Japan</option>
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+            <option value="Brazil">Brazil</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Korea">South Korea</option>
+            <option value="India">India</option>
+          </select>
+        </div>
+      </div>
+      <div className={styles.formrow1}>
+        <input type="text" placeholder="Your Name*"></input>
+        <input type="text" placeholder="Your Email*"></input>
+      </div>
+      <div className={styles.formrow2}>
+        <input type="text" placeholder="This question is about"></input>
+      </div>
+      <div className={styles.formrow3}>
+        <input type="text" placeholder="Your message..."></input>
+      </div>
+      <div className={styles.formbutton}>Start Free Demo</div>
+    </div>
+  </div>
+</ParallaxLayer>
+
         <ParallaxLayer offset={19} style={{ backgroundColor: "#EEEEEE" }}>
           <div className={styles.footer}>
             <div className={styles.footerflex}>
@@ -654,14 +724,17 @@ function HomePage() {
                   className={styles.footermedoc}
                   alt="/"
                 ></img>
-                <p>
-                  The complete healthcare ecosystem building towards better
-                  accessibility to healthcare and supporting you with medical
-                  finances and family medicine.
-                </p>
+
+                <div className={styles.footerAbout}>
+                  <p>
+                    The complete healthcare ecosystem building towards better
+                    accessibility to healthcare and supporting you with medical
+                    finances and family medicine.
+                  </p>
+                </div>
               </div>
               <div className={styles.footerconts}>
-                <h1>Usefull Links</h1>
+                <h1>Useful Links</h1>
                 <Link className={styles.footeritems}>How it Works?</Link>
                 <Link to="/privacypolicy" className={styles.footeritems}>
                   Privacy Policy
@@ -670,24 +743,40 @@ function HomePage() {
                   Terms of Use
                 </Link>
                 <Link to="/refundpolicy" className={styles.footeritems}>
-                  refund policy
+                  Refund policy
+                </Link>
+                <Link
+                  to="https://career.medochealth.in/
+
+"
+                  className={styles.footeritems}
+                >
+                  Career
                 </Link>
               </div>
-              <div className={styles.footerconts}>
-                <h1>Support</h1>
-                <Link to="/faq" className={styles.footeritems}>
-                  FAQs
-                </Link>
-                <Link className={styles.footeritems}>Editor Help</Link>
-                <Link className={styles.footeritems}>Live Chatting</Link>
-                <Link className={styles.footeritems}>Contact Us</Link>
-              </div>
-              <div className={styles.footercontm}>
-                <img
-                  src={fPlayButton}
-                  className={styles.footerplaybutton}
-                  alt=""
-                />
+              <div className={styles.footerSup}>
+                <div
+                  className={styles.footerconts}
+                  style={{ width: "100%", height: "30%" }}
+                >
+                  <h1>Support</h1>
+                  <Link to="/faq" className={styles.footeritems}>
+                    FAQs
+                  </Link>
+                  <Link className={styles.footeritems}>Contact Us</Link>
+
+                  <Link to="/mePolicy" className={styles.footeritems}>Me Privacy Policy</Link>
+                </div>
+                <div
+                  className={styles.footercontm}
+                  style={{ width: "100%", height: "40%" }}
+                >
+                  <img
+                    src={fPlayButton}
+                    className={styles.footerplaybutton}
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
             <div
@@ -700,13 +789,20 @@ function HomePage() {
               <div
                 style={{
                   padding: 0,
-                  position: "absolute",
+                  // position: "absolute",
                   bottom: 0,
                   width: "100%",
                 }}
               >
-                <p style={{ textAlign: "center", fontSize: "18px" }}>
-                  &copy; {new Date().getFullYear()} Medoc, ALL rights reserved
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: "18px",
+                    padding: "2%",
+                  }}
+                >
+                  &copy; {new Date().getFullYear()} Medoc Health IT Pvt. Ltd,
+                  All rights reserved
                 </p>
               </div>
             </div>

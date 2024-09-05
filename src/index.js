@@ -1,40 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {  RouterProvider, createBrowserRouter}from 'react-router-dom';
+import { RouterProvider, createHashRouter, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/homepage';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import FAQ from './pages/FAQ'
 import Refundpolicy from './pages/Refundpolicy'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Termsofuse from './pages/Termsofuse'
-const router=createBrowserRouter(
-  [
-  {
-path:'/',
-element:<HomePage></HomePage>
+import MePolicy from './pages/MePolicy';
 
-},{
-  path:'/faq',
-element:<FAQ></FAQ>
+const router = createHashRouter([{
+  path: '/',
+  element: < HomePage />
 },
 {
-  path:'/refundpolicy',
-element:<Refundpolicy></Refundpolicy>
+  path: '/faq',
+  element: < FAQ />
 },
 {
-  path:'/privacypolicy',
-element:<PrivacyPolicy></PrivacyPolicy>
+  path: '/refundpolicy',
+  element: < Refundpolicy />
 },
 {
-  path:'/termsofuse',
-element:<Termsofuse></Termsofuse>
-}
+  path: '/privacypolicy',
+  element: < PrivacyPolicy />
+},
+{
+  path: '/termsofuse',
+  element: < Termsofuse />
+},
+{
+  path: '/mePolicy',
+  element: < MePolicy />
+},
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ParallaxProvider>
-
-<RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </ParallaxProvider>
 );

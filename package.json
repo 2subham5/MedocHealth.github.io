@@ -1,7 +1,7 @@
 {
     "name": "medoc",
     "version": "0.1.0",
-    "homepage": "https://MedocHealth.github.io",
+    "homepage": ".",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.11.4",
@@ -49,6 +49,9 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-        "gh-pages": "^6.1.1"
+        "autoprefixer": "^10.4.19",
+        "gh-pages": "^6.1.1",
+        "postcss": "^8.4.39",
+        "tailwindcss": "^3.4.4"
     }
 }
